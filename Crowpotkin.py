@@ -2,11 +2,12 @@ import openai
 import pyttsx3
 
 from os import startfile
+from decouple import config
 
 engine = pyttsx3.init()
 
 # Set the API key
-openai.api_key = "YourKeyHere" #OpenAI API Key
+openai.api_key = config('KEY') #OpenAI API Key
 
 model_engine = "text-davinci-003"
 
